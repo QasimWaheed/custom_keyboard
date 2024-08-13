@@ -3,11 +3,11 @@ import 'package:keyboard_actions/keyboard_custom.dart';
 
 class TextKey extends StatelessWidget {
   const TextKey({
-    Key? key,
+    super.key,
     required this.text,
     this.onTextInput,
     this.flex = 1,
-  }) : super(key: key);
+  });
   final String text;
   final Function(String)? onTextInput;
   final int flex;
@@ -33,10 +33,10 @@ class TextKey extends StatelessWidget {
 
 class CustomKeyboard extends StatelessWidget with KeyboardCustomPanelMixin<String> implements PreferredSizeWidget {
   const CustomKeyboard({
-    Key? key,
+    super.key,
     required this.notifier,
-  }) : super(key: key);
-
+  });
+  
   final ValueNotifier<String> notifier;
 
   void _textInputHandler(text) {

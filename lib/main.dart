@@ -32,7 +32,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   final custom1Notifier = ValueNotifier<String>("");
   final FocusNode _nodeText1 = FocusNode();
 
@@ -52,8 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,11 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: KeyboardActions(
         config: _buildConfig(context),
-        child: Center(
+        child: const Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const <Widget>[
-              const Text(
+            children: <Widget>[
+              Text(
                 'You have pushed the button this many times:',
               ),
             ],
